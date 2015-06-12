@@ -11,12 +11,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-newer'); //only build changed files
 
-  //grunt.loadNpmTasks('grunt-csscomb');
-  //grunt.loadNpmTasks('grunt-inject');
-  //grunt.loadNpmTasks('grunt-exec');
-  //grunt.loadNpmTasks('grunt-debug-task');
-  //grunt.loadNpmTasks('grunt-contrib-qunit');
-  //grunt.loadNpmTasks('grunt-lib-phantomjs');
 
   //Dynamically load all the Node package Tasks with Matchdep
 
@@ -44,7 +38,7 @@ module.exports = function(grunt) {
                 {
                     cwd:"scss",
                     expand: true,
-                    src: ["../**/*.scss","!**/_*.scss"],
+                    src: ["../scss/**/*.scss","!../scss/**/_*.scss"],
                     dest: "../../online/css",
                     ext: ".css"
                 }
@@ -56,7 +50,7 @@ module.exports = function(grunt) {
     csslint: {
         laxOnline: {
             options: {
-                csslintrc: '.csslintrc'
+                csslintrc: '../scss/.csslintrc'
             },
             src: ['../../online/css/**/*.css']
         }
@@ -79,19 +73,7 @@ module.exports = function(grunt) {
             src: '**/*.js',
             dest: '../../online/js'
         }]
-      },
-      jsdev: {
-        files: [{
-            expand: true,
-            cwd: '../js',
-            src: '**/*.js',
-            dest: '../../online/js'
-        }]
-      }//,
-      // all: [
-      //   'js/**/*.js',
-      //   '!js/plugins.js'
-      // ]
+      }
     },
 
     // minifies images on the fly
