@@ -36,9 +36,9 @@ module.exports = function(grunt) {
             },
             files: [
                 {
-                    cwd:"scss",
+                    cwd:"../scss",
                     expand: true,
-                    src: ["../scss/**/*.scss","!../scss/**/_*.scss"],
+                    src: ["**/*.scss","!**/_*.scss"],
                     dest: "../../online/css",
                     ext: ".css"
                 }
@@ -135,8 +135,7 @@ module.exports = function(grunt) {
         files: '../fonts/**',
         tasks: ['newer:copy:fonts']
       },
-      options: {
-        livereload: false
+      options: {        livereload: false
       }
     }
   });

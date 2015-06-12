@@ -251,7 +251,7 @@ $switch-label-outline:            1px dotted #888 !default;
 
     }
 
-    @if $experimental { @-webkit-keyframes webkitSiblingBugfix { from { position: relative; } to { position: relative; } } }
+    //@if $experimental { @-webkit-keyframes webkitSiblingBugfix { from { position: relative; } to { position: relative; } } }
 
   }
 }
