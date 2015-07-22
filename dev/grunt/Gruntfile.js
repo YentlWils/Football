@@ -60,12 +60,12 @@ module.exports = function(grunt) {
     uglify: {
       js: {
         options: {
-          mangle: true,
+          mangle: false,
           compress: {
             drop_console: false
           },
 
-          beautify: false
+          beautify: true
         },
         files: [{
             expand: true,
@@ -116,7 +116,7 @@ module.exports = function(grunt) {
           files: [{
               expand: true,
               cwd: '../images',
-              src: '**/*.js',
+              src: '**/*.png',
               dest: '../../online/images'
           }]
       }
@@ -130,6 +130,11 @@ module.exports = function(grunt) {
         files: '../scss/**/*.scss',
         tasks: ['sass:online','csslint:laxOnline']
       },
+
+        js : {
+            files: '../online/js/**',
+            tasks: ['newer:copy:js']
+        },
 
       fonts : {
         files: '../fonts/**',
@@ -145,6 +150,8 @@ module.exports = function(grunt) {
   //tasks to be performed by default (for DEVELOPMENT)
   grunt.registerTask('default', [
     'copy:fonts',
+    'copy:js',
+
     'copy:images',
     'sass:online',
     'csslint:laxOnline',

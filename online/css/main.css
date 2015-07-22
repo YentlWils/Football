@@ -1,2 +1,194 @@
-.test {
-  color: black; }
+body {
+  padding: 0;
+  font-family: "Istok Web", "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background: url(../images/bg.png);
+  background-attachment: fixed; }
+
+.page {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+99&amp;0+48,0.65+100 */
+  background: -moz-radial-gradient(center, ellipse cover, transparent 0%, transparent 48%, rgba(0, 0, 0, 0.64) 99%, rgba(0, 0, 0, 0.65) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, transparent), color-stop(48%, transparent), color-stop(99%, rgba(0, 0, 0, 0.64)), color-stop(100%, rgba(0, 0, 0, 0.65)));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, transparent 0%, transparent 48%, rgba(0, 0, 0, 0.64) 99%, rgba(0, 0, 0, 0.65) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, transparent 0%, transparent 48%, rgba(0, 0, 0, 0.64) 99%, rgba(0, 0, 0, 0.65) 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, transparent 0%, transparent 48%, rgba(0, 0, 0, 0.64) 99%, rgba(0, 0, 0, 0.65) 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center, transparent 0%, transparent 48%, rgba(0, 0, 0, 0.64) 99%, rgba(0, 0, 0, 0.65) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  background-attachment: fixed; }
+
+a {
+  transition: all 0.22s ease-in-out; }
+
+.page-border {
+  -webkit-box-shadow: 0 0 25px black;
+  -moz-box-shadow: 0 0 25px black;
+  box-shadow: 0 0 25px black;
+  background-color: white; }
+
+.navbar {
+  background-color: #0089d0;
+  border-top: 10px solid white;
+  border-bottom: 10px solid black;
+  color: white;
+  margin-bottom: 0px; }
+  .navbar .navbar-nav > li > a {
+    color: white;
+    font-size: 18px;
+    font-weight: 200;
+    z-index: 999; }
+    .navbar .navbar-nav > li > a:hover {
+      background: transparent; }
+  .navbar .navbar-nav #magic-line {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100px;
+    height: 10px;
+    background: white; }
+  .navbar .navbar-nav #magic-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    background: #04a9ff;
+    z-index: 100; }
+
+#navigation-links {
+  position: relative; }
+
+.navbar-brand-img {
+  height: 90px;
+  position: absolute;
+  top: -5px;
+  margin-left: 10px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.scrollable {
+  position: relative;
+  top: 0px; }
+  .scrollable .navbar-brand-img {
+    height: 120px;
+    top: -50%;
+    margin-left: 0px; }
+
+.socialbuttons {
+  padding-top: 10px;
+  background-color: white; }
+  .socialbuttons .box {
+    height: 24px;
+    margin-left: 10px;
+    font-size: 12px;
+    color: white;
+    transition: all 0.22s ease-in-out; }
+    .socialbuttons .box a {
+      color: white;
+      text-decoration: none;
+      line-height: 24px;
+      padding: 0 10px;
+      font-family: "Istok Web"; }
+  .socialbuttons .box-twitter {
+    background: #0C81D4; }
+    .socialbuttons .box-twitter:hover {
+      background: #219bf2; }
+  .socialbuttons .box-facebook {
+    background: #085388; }
+    .socialbuttons .box-facebook:hover {
+      background: #0b70b8; }
+
+header.carousel {
+  height: 75%; }
+
+.owl-carousel {
+  position: relative; }
+  .owl-carousel .owl-controls {
+    margin-bottom: 10px; }
+    .owl-carousel .owl-controls .owl-buttons > div {
+      display: block;
+      position: absolute;
+      top: 38%;
+      background-color: transparent;
+      margin: 0px 10px 0px 10px;
+      color: white;
+      opacity: 1; }
+      .owl-carousel .owl-controls .owl-buttons > div .fa {
+        font-size: 90px;
+        text-shadow: 0px 0px 1px black; }
+      .owl-carousel .owl-controls .owl-buttons > div.owl-prev {
+        left: 0px; }
+      .owl-carousel .owl-controls .owl-buttons > div.owl-next {
+        right: 0px; }
+
+.panel .panel-heading {
+  font-family: "Oswald";
+  background: #00679d;
+  color: white; }
+.panel .panel-body {
+  border-bottom: 1px solid #ddd; }
+  .panel .panel-body:last-child {
+    border-bottom: none; }
+  .panel .panel-body h4 {
+    margin-top: 0px;
+    font-family: Oswald;
+    font-weight: 400;
+    font-size: 17px; }
+  .panel .panel-body .panel-body-link {
+    color: #333; }
+  .panel .panel-body .panel-body-date {
+    float: right;
+    background-color: #C5C5C5;
+    color: white;
+    padding: 8px;
+    font-family: Oswald;
+    font-weight: 700;
+    margin-left: 12px;
+    position: relative; }
+    .panel .panel-body .panel-body-date span {
+      display: block;
+      text-align: center; }
+      .panel .panel-body .panel-body-date span.day {
+        font-size: 18px; }
+      .panel .panel-body .panel-body-date span.month {
+        font-size: 15px; }
+    .panel .panel-body .panel-body-date:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0;
+      border-right: 37px solid #C5C5C5;
+      border-bottom: 15px solid transparent;
+      border-bottom-color: rgba(0, 255, 0, 0);
+      position: absolute;
+      right: 0px;
+      bottom: -15px; }
+  .panel .panel-body .panel-body-score {
+    float: right; }
+  .panel .panel-body .panel-body-next-match {
+    margin-top: 15px;
+    display: table;
+    width: 100%; }
+    .panel .panel-body .panel-body-next-match > div {
+      display: table-cell;
+      width: 33.33%;
+      text-align: center; }
+      .panel .panel-body .panel-body-next-match > div img {
+        width: 74%; }
+      .panel .panel-body .panel-body-next-match > div h5 {
+        margin-bottom: 0px; }
+      .panel .panel-body .panel-body-next-match > div.divider {
+        font-size: 18px; }
+
+footer {
+  margin: 0px; }
+
+h2.page-header {
+  font-family: "Oswald"; }
