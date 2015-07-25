@@ -112,20 +112,20 @@ header.carousel {
   position: relative; }
   .owl-carousel .owl-controls {
     margin-bottom: 10px; }
-    .owl-carousel .owl-controls .owl-buttons > div {
+    .owl-carousel .owl-controls .owl-nav > div {
       display: block;
       position: absolute;
       top: 38%;
-      background-color: transparent;
+      background-color: transparent !important;
       margin: 0px 10px 0px 10px;
       color: white;
       opacity: 1; }
-      .owl-carousel .owl-controls .owl-buttons > div .fa {
+      .owl-carousel .owl-controls .owl-nav > div .fa {
         font-size: 90px;
         text-shadow: 0px 0px 1px black; }
-      .owl-carousel .owl-controls .owl-buttons > div.owl-prev {
+      .owl-carousel .owl-controls .owl-nav > div.owl-prev {
         left: 0px; }
-      .owl-carousel .owl-controls .owl-buttons > div.owl-next {
+      .owl-carousel .owl-controls .owl-nav > div.owl-next {
         right: 0px; }
 
 .panel .panel-heading {
@@ -192,3 +192,19 @@ footer {
 
 h2.page-header {
   font-family: "Oswald"; }
+
+.home-player img {
+  position: relative;
+  transition: all 0.22s ease-in-out; }
+.home-player h5 {
+  font-family: Oswald;
+  text-decoration: none;
+  color: #333;
+  position: absolute;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 9px;
+  width: 100%;
+  margin: 0;
+  font-size: 15px;
+  text-align: center; }

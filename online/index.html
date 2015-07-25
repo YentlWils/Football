@@ -217,37 +217,50 @@
 
                         <div class="item">
                             <a href="portfolio-item.html">
-                                <img class="img-responsive img-hover" src="http://placehold.it/700x450" alt="">
+                                <div class="home-player">
+                                    <img class="img-responsive img-hover" src="images/thumbs/SK_DE_Brug-2321.jpg" alt="">
+                                    <h5>#14 - Ben Oeyen</h5>
+                                </div>
                             </a>
                         </div>
                         <div class="item">
                             <a href="portfolio-item.html">
-                                <img class="img-responsive img-hover" src="http://placehold.it/700x450" alt="">
+                                <div class="home-player">
+                                    <img class="img-responsive img-hover" src="images/thumbs/SK_DE_Brug-2331.jpg" alt="">
+                                    <h5>#05 - Lorem ipsum</h5>
+                                </div>
                             </a>
                         </div>
                         <div class="item">
                             <a href="portfolio-item.html">
-                                <img class="img-responsive img-hover" src="http://placehold.it/700x450" alt="">
+                                <div class="home-player">
+                                    <img class="img-responsive img-hover" src="images/thumbs/SK_DE_Brug-2344.jpg" alt="">
+                                    <h5>#11 - Ipsum dolor</h5>
+                                </div>
                             </a>
                         </div>
                         <div class="item">
                             <a href="portfolio-item.html">
-                                <img class="img-responsive img-hover" src="http://placehold.it/700x450" alt="">
+                                <div class="home-player">
+                                    <img class="img-responsive img-hover" src="images/thumbs/SK_DE_Brug-2351.jpg" alt="">
+                                    <h5>#15 - Sit amet</h5>
+                                </div>
                             </a>
                         </div>
                         <div class="item">
                             <a href="portfolio-item.html">
-                                <img class="img-responsive img-hover" src="http://placehold.it/700x450" alt="">
+                                <div class="home-player">
+                                    <img class="img-responsive img-hover" src="images/thumbs/SK_DE_Brug-2358.jpg" alt="">
+                                    <h5>#01 - Consectetur adipisicing</h5>
+                                </div>
                             </a>
                         </div>
                         <div class="item">
                             <a href="portfolio-item.html">
-                                <img class="img-responsive img-hover" src="http://placehold.it/700x450" alt="">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="portfolio-item.html">
-                                <img class="img-responsive img-hover" src="http://placehold.it/700x450" alt="">
+                                <div class="home-player">
+                                    <img class="img-responsive img-hover" src="images/thumbs/SK_DE_Brug-2368.jpg" alt="">
+                                    <h5>#08 - Labore laboriosam</h5>
+                                </div>
                             </a>
                         </div>
 
@@ -279,7 +292,7 @@
                     <a href="#" class="btn btn-default">Lees meer</a>
                 </div>
                 <div class="col-md-6">
-                    <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+                    <img class="img-responsive" src="images/team/team-pic.jpg" alt="">
                 </div>
             </div>
             <!-- /.row -->
@@ -332,31 +345,28 @@
             $(document).ready(function() {
 
                 $("#home-banner").owlCarousel({
-
-                    navigation : true, // Show next and prev buttons
-                    navigationText: [
+                    nav:true,
+                    navText: [
                         "<i class='fa fa-angle-left'></i>",
                         "<i class='fa fa-angle-right'></i>"
                     ],
-                    slideSpeed : 300,
-                    paginationSpeed : 400,
-                    singleItem:true,
+                    dotsSpeed : 400,
+                    items : 1,
                     autoPlay: true,
                     lazyLoad: true
                 });
 
                 $("#home-team").owlCarousel({
-
-                    navigation : true, // Show next and prev buttons
-                    navigationText: [
+                    nav : true, // Show next and prev buttons
+                    navText: [
                         "<i class='fa fa-angle-left'></i>",
                         "<i class='fa fa-angle-right'></i>"
                     ],
-                    slideSpeed : 300,
-                    paginationSpeed : 400,
+                    dotsSpeed : 400,
                     autoPlay: 3000, //Set AutoPlay to 3 seconds
-                    items : 4,
-                    lazyLoad: true
+                    items : 6,
+                    lazyLoad: true,
+                    margin: 10
                 });
 
             });

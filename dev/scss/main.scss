@@ -167,12 +167,12 @@ header.carousel{
   .owl-controls{
     margin-bottom: 10px;
 
-    .owl-buttons{
+    .owl-nav{
       & > div {
         display: block;
         position: absolute;
         top: 38%;
-        background-color: transparent;
+        background-color: transparent !important;
         margin: 0px 10px 0px 10px;
         color: white;
         opacity: 1;
@@ -299,5 +299,26 @@ footer{
 h2{
   &.page-header{
     font-family: "Oswald";
+  }
+}
+
+// Players
+.home-player{
+  img{
+    position: relative;
+    transition: all 0.22s ease-in-out;
+  }
+  h5{
+    font-family: Oswald;
+    text-decoration: none;
+    color: #333;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 9px;
+    width: 100%;
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
   }
 }
