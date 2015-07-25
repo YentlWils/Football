@@ -116,7 +116,7 @@ module.exports = function(grunt) {
           files: [{
               expand: true,
               cwd: '../images',
-              src: '**/*.png',
+              src: '**/*.{png,jpg}',
               dest: '../../online/images'
           }]
       }
@@ -134,6 +134,11 @@ module.exports = function(grunt) {
         js : {
             files: '../online/js/**',
             tasks: ['newer:copy:js']
+        },
+
+        image : {
+            files: '../online/images/**',
+            tasks: ['newer:copy:images']
         },
 
       fonts : {
