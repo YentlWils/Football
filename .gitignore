@@ -2,6 +2,6 @@ $ cat .gitignore
 
 dev/grunt/node_modules/**/* 
 
-idea/**/*
+idea/
 
-projectFilesBackup/**/*
+projectFilesBackup/
