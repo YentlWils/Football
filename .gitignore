@@ -1,6 +1,6 @@
 $ cat .gitignore
 
-dev/grunt/node_modules/**/* 
+dev/grunt/node_modules/
 
 idea/
 
