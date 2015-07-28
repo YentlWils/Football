@@ -119,7 +119,15 @@ module.exports = function(grunt) {
               src: '**/*.{png,jpg}',
               dest: '../../online/images'
           }]
-      }
+      },
+        docker: {
+            files: [{
+                expand: true,
+                cwd: '../../online',
+                src: '**/*',
+                dest: 'D:/xampp/htdocs/docker-skdebrug/html'
+            }]
+        }
     },
 
     // Add all these actions to the watch
@@ -141,6 +149,11 @@ module.exports = function(grunt) {
             tasks: ['newer:copy:images']
         },
 
+        docker : {
+            files: '../../online',
+            tasks: ['newer:copy:docker']
+        },
+
       fonts : {
         files: '../fonts/**',
         tasks: ['newer:copy:fonts']
@@ -156,8 +169,8 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'copy:fonts',
     'copy:js',
-
     'copy:images',
+    'copy:docker',
     'sass:online',
     'csslint:laxOnline',
     'watch'
