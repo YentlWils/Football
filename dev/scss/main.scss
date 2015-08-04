@@ -331,7 +331,6 @@ h2{
 
   }
   h5{
-    font-family: Oswald;
     text-decoration: none;
     color: #333;
     position: absolute;
@@ -359,5 +358,61 @@ h2{
     text-align: center;
     transition: all 0.22s ease-in-out;
     padding-top: 10px;
+  }
+}
+
+.player{
+  position: relative;
+
+  .player-image{
+    padding-top: 120%;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+
+    .player-image--img{
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: top;
+      transition: all 0.22s ease-in-out;
+    }
+  }
+  &:hover{
+    .player-image--img{
+      transform: scale(1.1);
+    }
+  }
+
+  .caption{
+    position: absolute;
+    bottom: 20px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    right: 4px;
+    left: 4px;
+
+    h3{
+      margin: 0;
+    }
+  }
+
+  .player-score{
+    //text-align: left;
+    font-size: 0.7em;
+  }
+
+  .red{
+    color: red;
+  }
+
+  .yellow{
+    color: yellow;
+  }
+
+  .black{
+    color: #666;
   }
 }
