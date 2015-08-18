@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "firstName": "Gunther",
+    "lastName": "Dillen",
+    "number": 1,
+    "dateOfBirth": 1439821078884,
+    "playerType": "GOALKEEPER"
+  },
+  {
+    "id": 2,
+    "firstName": "Frederik",
+    "lastName": "Verboven",
+    "number": 2,
+    "dateOfBirth": 1439821078887,
+    "playerType": "DEFENDER"
+  },
+  {
+    "id": 3,
+    "firstName": "Ben",
+    "lastName": "Oeyen",
+    "number": 3,
+    "dateOfBirth": 1439821078888,
+    "playerType": "DEFENDER"
+  },
+  {
+    "id": 4,
+    "firstName": "Glenn",
+    "lastName": "Gersis",
+    "number": 4,
+    "dateOfBirth": 1439821078890,
+    "playerType": "DEFENDER"
+  },
+  {
+    "id": 5,
+    "firstName": "Robin",
+    "lastName": "Oeyen",
+    "number": 5,
+    "dateOfBirth": 1439821078892,
+    "playerType": "MIDFIELDER"
+  },
+  {
+    "id": 6,
+    "firstName": "Maarten",
+    "lastName": "Mennes",
+    "number": 6,
+    "dateOfBirth": 1439821078893,
+    "playerType": "DEFENDER"
+  },
+  {
+    "id": 7,
+    "firstName": "Dave",
+    "lastName": "Haenen",
+    "number": 7,
+    "dateOfBirth": 1439821078896,
+    "playerType": "MIDFIELDER"
+  },
+  {
+    "id": 8,
+    "firstName": "Arne",
+    "lastName": "Vergauwen",
+    "number": 8,
+    "dateOfBirth": 1439821078898,
+    "playerType": "MIDFIELDER"
+  },
+  {
+    "id": 9,
+    "firstName": "Stefan",
+    "lastName": "Lauwers",
+    "number": 9,
+    "dateOfBirth": 1439821078899,
+    "playerType": "MIDFIELDER"
+  },
+  {
+    "id": 10,
+    "firstName": "Stijn",
+    "lastName": "De Mayer",
+    "number": 10,
+    "dateOfBirth": 1439821078901,
+    "playerType": "MIDFIELDER"
+  },
+  {
+    "id": 11,
+    "firstName": "Mathijs",
+    "lastName": "Bettens",
+    "number": 11,
+    "dateOfBirth": 1439821078904,
+    "playerType": "STRIKER"
+  },
+  {
+    "id": 12,
+    "firstName": "Steven",
+    "lastName": "Heirbaut",
+    "number": 12,
+    "dateOfBirth": 1439821078906,
+    "playerType": "DEFENDER"
+  },
+  {
+    "id": 13,
+    "firstName": "Mikka",
+    "lastName": "Uten",
+    "number": 13,
+    "dateOfBirth": 1439821078907,
+    "playerType": "STRIKER"
+  },
+  {
+    "id": 14,
+    "firstName": "Nick",
+    "lastName": "Vandeperre",
+    "number": 14,
+    "dateOfBirth": 1439821078909,
+    "playerType": "STRIKER"
+  },
+  {
+    "id": 15,
+    "firstName": "Simon",
+    "lastName": "Bettens",
+    "number": 16,
+    "dateOfBirth": 1439821078911,
+    "playerType": "MIDFIELDER"
+  },
+  {
+    "id": 16,
+    "firstName": "Thijs",
+    "lastName": "Dillen",
+    "number": 17,
+    "dateOfBirth": 1439821078915,
+    "playerType": "MIDFIELDER"
+  },
+  {
+    "id": 17,
+    "firstName": "Johan",
+    "lastName": "Offeciers",
+    "number": 18,
+    "dateOfBirth": 1439821078917,
+    "playerType": "DEFENDER"
+  },
+  {
+    "id": 18,
+    "firstName": "Benjamin",
+    "lastName": "Berckmoes",
+    "number": 19,
+    "dateOfBirth": 1439821078920,
+    "playerType": "MIDFIELDER"
+  },
+  {
+    "id": 19,
+    "firstName": "Renze",
+    "lastName": "De Locht",
+    "number": 20,
+    "dateOfBirth": 1439821078922,
+    "playerType": "DEFENDER"
+  }
+]
