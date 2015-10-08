@@ -96,51 +96,29 @@
     </header>
     <!-- Page Content -->
     <div class="container page-border">
-
-        <div class="row">
+        <div class="row" ng-controller="bannerSliderController as banner">
             <div class="span12">
-                <div id="home-banner" class="owl-carousel">
-
-                    <div class="item"><img src="http://www.krcgenk.be/images/news/large/20150707-krc-genk-fandag-header-website-png_1437122002.png" alt="The Last of us"></div>
-                    <div class="item"><img src="http://www.krcgenk.be/images/news/large/15-16-fandag-54-jpg_1437368964.jpg" alt="GTA V"></div>
-                    <div class="item"><img src="http://www.krcgenk.be/images/news/large/legends-jpg-1436947686-jpg_1437141527.jpg" alt="Mirror Edge"></div>
-
-                </div>
+                <data-owl-carousel id="home-banner" class="owl-carousel" data-options="{dotsSpeed : 400,dots: true, autoPlay: true, lazyLoad: true, items : 1, nav: true, autoplay : true, autoplayTimeout : 5000}">
+                    <div owl-carousel-item="" ng-repeat="slide in banner.slides" class="item">
+                        <img src="{{slide}}">
+                    </div>
+                </data-owl-carousel>
             </div>
         </div>
-
         <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-md-8">
-                <div class="panel panel-default">
+                <div class="panel panel-default" ng-controller="newsController as news">
                     <div class="panel-heading">
                         <h4>Laatste nieuwsberichten</h4>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body" ng-repeat="item in news.items">
                             <span class="panel-body-date">
-                                <span class="day">21</span>
-                                <span class="month">JUL</span>
+                                <span class="day">{{item.date | date:'dd'}}</span>
+                                <span class="month">{{item.date | date:'MMM' | uppercase}}</span>
                             </span>
-                        <h4>Lorem ipsum dolor sit.</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Lees meer</a>
-                    </div>
-                    <div class="panel-body">
-                            <span class="panel-body-date">
-                                <span class="day">15</span>
-                                <span class="month">JUN</span>
-                            </span>
-                        <h4>Lorem ipsum dolor sit amet, consectetur.</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Lees meer</a>
-                    </div>
-                    <div class="panel-body">
-                            <span class="panel-body-date">
-                                <span class="day">30</span>
-                                <span class="month">MEI</span>
-                            </span>
-                        <h4>Lorem ipsum.</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <h4>{{item.title}}</h4>
+                        <p>{{item.content | trim:true:300:' ...'}}</p>
                         <a href="#" class="btn btn-default">Lees meer</a>
                     </div>
                     <div class="panel-body">
@@ -149,54 +127,48 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="panel panel-default panel-link">
+                <div class="panel panel-default panel-link" ng-controller="nextMatchWidgetController as match">
                     <div class="panel-heading">
                         <h4>Volgende Wedstrijd</h4>
                     </div>
                     <div class="panel-body">
-                        <h4 class="text-center">Vrijdag 16/07/2015 - 20:15</h4>
+                        <h4 class="text-center">{{match.next.date | date:'EEEE dd/MM/yyyy - hh:mm'}}</h4>
                         <div class="panel-body-next-match">
                             <div class="in">
-                                <img src="images/match/sk-de-brug.jpg">
-                                <h5>SK De Brug</h5>
+                                <img src="images/clubs/{{match.next.homeTeam.img | lowercase }}.png" onerror="this.src = 'images/fallback/club.jpg';">
+                                <h5>{{match.next.homeTeam.name}}</h5>
                             </div>
                             <div class="divider">VS</div>
                             <div class="out">
-                                <img src="images/match/rsca.jpg">
-                                <h5>RSC Anderlecht</h5>
+                                <img src="images/clubs/{{match.next.awayTeam.img | lowercase }}.png" onerror="this.src = 'images/fallback/club.jpg';">
+                                <h5>{{match.next.awayTeam.name}}</h5>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="panel panel-default panel-link">
+            <div class="col-md-4" >
+                <div class="panel panel-default panel-link" ng-controller="matchWidgetController as match">
                     <div class="panel-heading">
                         <h4>Wedstrijden</h4>
                     </div>
                     <div class="panel-body">
                         <a class="panel-body-link" href="#">
                                 <span class="panel-body-score">
-                                    <span class="in">5</span>
+                                    <span class="in">{{match.prev.homeScore}}</span>
                                     <span class="divider">-</span>
-                                    <span class="out">4</span>
+                                    <span class="out">{{match.prev.awayScore}}</span>
                                 </span>
-                            <h4>KRC Genk - SK De Brug</h4>
+                            <h4>{{match.prev.homeTeam.name}} - {{match.prev.awayTeam.name}}</h4>
                             <div class="panel-body-match-date">
-                                Zondag 19/07/2015 - 14:45
+                                {{match.prev.date | date:'EEEE dd/MM/yyyy - hh:mm'}}
                             </div>
                         </a>
                     </div>
-                    <div class="panel-body">
-                        <h4>SK De Brug - RSC Anderlecht</h4>
+                    <div class="panel-body" ng-repeat="club in match.next">
+                        <h4>{{club.homeTeam.name}} - {{club.awayTeam.name}}</h4>
                         <div class="panel-body-match-date">
-                            Zaterdag 25/07/2015 - 17:00
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <h4>KAA Gent - SK De Brug</h4>
-                        <div class="panel-body-match-date">
-                            Woensdag 28/07/2015 - 18:30
+                            {{club.date | date:'EEEE dd/MM/yyyy - hh:mm'}}
                         </div>
                     </div>
                     <div class="panel-body">
@@ -217,7 +189,7 @@
                     <div owl-carousel-item="" ng-repeat="player in team.players" class="item">
                         <a href="portfolio-item.html">
                             <div class="home-player">
-                                <img class="img-responsive" src="images/thumbs/SK_DE_Brug-2321.jpg" alt="">
+                                <img class="img-responsive" src="images/players/thumbs/{{player.lastName}}_{{player.firstName}}.jpg" alt="{{player.firstName}} {{player.lastName}}" onerror="this.src = 'images/fallback/player.jpg';">
                                 <div class="number">{{player.number}}</div>
                                 <h5>{{player.firstName}} {{player.lastName}}</h5>
                             </div>
@@ -321,41 +293,9 @@
     <script src="js/app.directives.js"></script>
     <script src="js/app.services.js"></script>
     <script src="js/app.controllers.js"></script>
+    <script src="js/app.filters.js"></script>
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
-
-    <!-- Script to Activate the Carousel -->
-    <script>
-        $(document).ready(function() {
-
-            $("#home-banner").owlCarousel({
-                nav:true,
-                navText: [
-                    "<i class='fa fa-angle-left'></i>",
-                    "<i class='fa fa-angle-right'></i>"
-                ],
-                dotsSpeed : 400,
-                items : 1,
-                autoPlay: true,
-                lazyLoad: true
-            });
-
-            /**$("#home-team").owlCarousel({
-                nav : true, // Show next and prev buttons
-                navText: [
-                    "<i class='fa fa-angle-left'></i>",
-                    "<i class='fa fa-angle-right'></i>"
-                ],
-                dotsSpeed : 400,
-                autoPlay: 3000, //Set AutoPlay to 3 seconds
-                items : 6,
-                lazyLoad: true,
-                margin: 10
-            });**/
-
-        });
-    </script>
-
 </div>
 </body>
 
