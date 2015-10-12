@@ -1,5 +1,7 @@
 dev/grunt/node_modules/
 
+dev/scss/bourbon/
+
 .idea/
 
 projectFilesBackup/

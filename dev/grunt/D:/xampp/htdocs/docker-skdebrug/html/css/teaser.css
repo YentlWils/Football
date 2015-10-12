@@ -1,0 +1,35 @@
+body {
+  padding: 0;
+  font-family: "Istok Web", "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background: url(../images/teaser.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  margin: 0; }
+
+.page {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+99&amp;0+48,0.65+100 */
+  background: -moz-radial-gradient(center, ellipse cover, transparent 0%, transparent 20%, rgba(0, 0, 0, 0.64) 99%, rgba(0, 0, 0, 0.65) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, transparent), color-stop(20%, transparent), color-stop(99%, rgba(0, 0, 0, 0.64)), color-stop(100%, rgba(0, 0, 0, 0.65)));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, transparent 0%, transparent 20%, rgba(0, 0, 0, 0.64) 99%, rgba(0, 0, 0, 0.65) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, transparent 0%, transparent 20%, rgba(0, 0, 0, 0.64) 99%, rgba(0, 0, 0, 0.65) 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, transparent 0%, transparent 20%, rgba(0, 0, 0, 0.64) 99%, rgba(0, 0, 0, 0.65) 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center, transparent 0%, transparent 20%, rgba(0, 0, 0, 0.64) 99%, rgba(0, 0, 0, 0.65) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed; }
+
+h1 {
+  display: none; }
