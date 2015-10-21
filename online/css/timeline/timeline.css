@@ -248,42 +248,59 @@ header {
     margin: 0;
     font-family: "Oswald"; }
     .cd-timeline-content h2 .big {
-      font-size: 62px;
-      font-size: 3.875rem; }
+      margin-right: 8px;
+      font-size: 30px;
+      font-size: 1.875rem; }
     .cd-timeline-content h2 .date-details {
-      margin-left: 8px;
-      display: inline-block; }
-      .cd-timeline-content h2 .date-details span {
-        display: block; }
-        .cd-timeline-content h2 .date-details span:last-child {
-          margin-top: 5px;
-          color: #7f8c97; }
+      display: inline-block;
+      font-size: 30px;
+      font-size: 1.875rem; }
+      .cd-timeline-content h2 .date-details span:first-child {
+        display: none; }
+      .cd-timeline-content h2 .date-details span:last-child {
+        margin-top: 5px;
+        color: black; }
   .cd-timeline-content .cd-title {
     font-size: 13px;
     font-size: 0.8125rem; }
-  .cd-timeline-content .cd-title {
-    display: inline-block; }
   .cd-timeline-content p {
     font-size: 20px;
     font-size: 1.25rem;
-    margin: 1em 0;
     margin-bottom: 0;
     line-height: 1.6; }
   .cd-timeline-content .cd-title {
-    float: left;
     padding: .8em 0;
+    font-size: 26px;
+    font-size: 1.625rem;
     opacity: .7;
-    color: #000304; }
+    color: #000304;
+    display: block; }
   @media only screen and (min-width: 768px) {
     .cd-timeline-content h2 {
       font-size: 25px;
       font-size: 1.5625rem; }
+      .cd-timeline-content h2 .big {
+        font-size: 62px;
+        font-size: 3.875rem; }
+      .cd-timeline-content h2 .date-details {
+        font-size: 25px;
+        font-size: 1.5625rem; }
+        .cd-timeline-content h2 .date-details span {
+          display: block; }
+          .cd-timeline-content h2 .date-details span:first-child {
+            display: block; }
+          .cd-timeline-content h2 .date-details span:last-child {
+            color: #7f8c97; }
     .cd-timeline-content p {
       font-size: 25px;
-      font-size: 1.5625rem; }
+      font-size: 1.5625rem;
+      margin: 1em 0; }
     .cd-timeline-content .cd-title {
+      padding: .8em 0;
       font-size: 25px;
-      font-size: 1.5625rem; } }
+      font-size: 1.5625rem;
+      display: inline-block;
+      float: left; } }
   @media only screen and (min-width: 1170px) {
     .cd-timeline-content {
       margin-left: 0;

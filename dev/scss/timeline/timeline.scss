@@ -262,18 +262,20 @@ header {
 	  font-family: "Oswald";
 
 	  .big{
-		//font-weight: 600;
-		@include font-size(62px);
+		margin-right: 8px;
+		@include font-size(30px);
 	  }
 
 	  .date-details{
-		margin-left: 8px;
 		display: inline-block;
+		@include font-size(30px);
 		span{
-		  display: block;
+		  &:first-child{
+			display: none;
+		  }
 		  &:last-child{
 			margin-top: 5px;
-			color: $main-text;
+			color: black;
 		  }
 		}
 	  }
@@ -283,35 +285,53 @@ header {
 		@include font-size(13px);
 	}
 
-	.cd-title {
-		display: inline-block;
-	}
 
 	p {
 	  	@include font-size(20px);
-		margin: 1em 0;
 	  	margin-bottom: 0;
 		line-height: 1.6;
 	}
 
 	.cd-title {
-		float: left;
-		padding: .8em 0;
+	  	padding: .8em 0;
+	  	@include font-size(26px);
 		opacity: .7;
 	  	color: darken($brug-blue,40%);
+	  	display: block;
 	}
 
 	@include MQ(M) {
-		h2 {
-			@include font-size(25px);
+	  h2 {
+		@include font-size(25px);
+
+		.big{
+		  @include font-size(62px);
 		}
+
+		.date-details{
+		  @include font-size(25px);
+		  span{
+			display: block;
+			&:first-child{
+			  display: block;
+			}
+			&:last-child{
+			  color: $main-text;
+			}
+		  }
+		}
+	  }
 
 		p {
 			@include font-size(25px);
+		  	margin: 1em 0;
 		}
 
 		.cd-title {
+		  	padding: .8em 0;
 			@include font-size(25px);
+			display: inline-block;
+		  	float: left;
 		}
 	}
 

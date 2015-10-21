@@ -37,6 +37,11 @@ a {
   border-bottom: 10px solid black;
   color: white;
   margin-bottom: 0px; }
+  .navbar .navbar-nav > li:hover, .navbar .navbar-nav > li:focus, .navbar .navbar-nav > li:active {
+    background: #04a9ff; }
+    @media only screen and (min-width: 768px) {
+      .navbar .navbar-nav > li:hover, .navbar .navbar-nav > li:focus, .navbar .navbar-nav > li:active {
+        background: transparent; } }
   .navbar .navbar-nav > li > a {
     color: white;
     font-size: 18px;
@@ -44,42 +49,68 @@ a {
     z-index: 999; }
     .navbar .navbar-nav > li > a:hover {
       background: transparent; }
-  .navbar .navbar-nav #magic-line {
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100px;
-    height: 10px;
+  .navbar .navbar-nav > li.current_page_item {
     background: white; }
+    @media only screen and (min-width: 768px) {
+      .navbar .navbar-nav > li.current_page_item {
+        background: transparent; } }
+    .navbar .navbar-nav > li.current_page_item a {
+      color: #00466a; }
+      @media only screen and (min-width: 768px) {
+        .navbar .navbar-nav > li.current_page_item a {
+          color: white; } }
+  .navbar .navbar-nav #magic-line {
+    display: none; }
+    @media only screen and (min-width: 768px) {
+      .navbar .navbar-nav #magic-line {
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100px;
+        height: 10px;
+        background: white; } }
   .navbar .navbar-nav #magic-block {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    background: #04a9ff;
-    z-index: 100; }
+    display: none; }
+    @media only screen and (min-width: 768px) {
+      .navbar .navbar-nav #magic-block {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        background: #04a9ff;
+        z-index: 100; } }
 
 #navigation-links {
   position: relative; }
 
 .navbar-brand-img {
-  height: 90px;
+  height: 78px;
+  top: -9px;
   position: absolute;
-  top: -5px;
   margin-left: 10px;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
+  @media only screen and (min-width: 768px) {
+    .navbar-brand-img {
+      height: 90px;
+      top: -5px; } }
 
 .scrollable {
   position: relative;
   top: 0px; }
   .scrollable .navbar-brand-img {
-    height: 120px;
-    top: -50%;
+    height: 100px;
+    top: -42%;
     margin-left: 0px; }
+    @media only screen and (min-width: 768px) {
+      .scrollable .navbar-brand-img {
+        height: 120px;
+        top: -50%; } }
 
 .socialbuttons {
   padding-top: 10px;
@@ -266,3 +297,6 @@ h2.page-header {
     color: yellow; }
   .player .black {
     color: #666; }
+
+.navbar-toggle .icon-bar {
+  background-color: white; }

@@ -140,17 +140,17 @@ module.exports = function(grunt) {
       },
 
         js : {
-            files: '../online/js/**',
+            files: '../js/**',
             tasks: ['newer:copy:js']
         },
 
         image : {
-            files: '../online/images/**',
+            files: '../images/**',
             tasks: ['newer:copy:images']
         },
 
         docker : {
-            files: '../../online',
+            files: '../online',
             tasks: ['newer:copy:docker']
         },
 

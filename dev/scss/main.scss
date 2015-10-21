@@ -1,6 +1,7 @@
 //@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
 //@import url(http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic);
 @import "settings";
+@import "timeline/partials/layout";
 
 body{
   padding: 0;
@@ -47,6 +48,13 @@ a{
 
   .navbar-nav{
     & > li {
+      &:hover, &:focus, &:active{
+        background: lighten($brug-blue, 10);
+        @include MQ(M) {
+          background: transparent;
+        }
+      }
+
       & > a {
         color: white;
         font-size: 18px;
@@ -61,7 +69,15 @@ a{
       }
 
       &.current_page_item{
+          background: lighten($brug-blue, 60);
+          @include MQ(M) {
+            background: transparent;
+          }
         a{
+          color: darken($brug-blue, 20);
+          @include MQ(M) {
+            color: white;
+          }
           //background: lighten($brug-blue, 10);
         }
       }
@@ -71,21 +87,29 @@ a{
 
 
     #magic-line {
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 100px;
-      height: 10px;
-      background: white;
+      display: none;
+      @include MQ(M) {
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100px;
+        height: 10px;
+        background: white;
+      }
     }
 
     #magic-block {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100px;
-      background: lighten($brug-blue, 10);
-      z-index: 100;
+      display: none;
+      @include MQ(M) {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        background: lighten($brug-blue, 10);
+        z-index: 100;
+      }
     }
 
 
@@ -98,11 +122,15 @@ a{
 
 
 .navbar-brand-img{
-  height: 90px;
+  height: 78px;
+  top: -9px;
   position: absolute;
-  top: -5px;
   margin-left: 10px;
 
+  @include MQ(M) {
+    height: 90px;
+    top: -5px;
+  }
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -115,8 +143,12 @@ a{
   top: 0px;
 
   .navbar-brand-img{
-    height: 120px;
-    top: -50%;
+    height: 100px;
+    top: -42%;
+    @include MQ(M) {
+      height: 120px;
+      top: -50%;
+    }
     margin-left: 0px;
   }
 }
@@ -414,5 +446,11 @@ h2{
 
   .black{
     color: #666;
+  }
+}
+
+.navbar-toggle{
+  .icon-bar{
+    background-color: white;
   }
 }
