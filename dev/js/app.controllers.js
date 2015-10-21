@@ -90,6 +90,24 @@
         var banner = this;
         banner.slides = [];
         var slides = [0,1,2,3,4,5,6,7,8,9];
+        var owl = $('#home-banner');
+
+        var defaultOptions = {
+            nav : true, // Show next and prev buttons
+            dots: false,
+            navText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+            lazyLoad: true
+        };
+        var customOptions = $scope.$eval(owl.attr('data-options'));
+        // combine the two options objects
+        for(var key in customOptions) {
+            defaultOptions[key] = customOptions[key];
+        }
+        // init carousel
+        owl.owlCarousel(defaultOptions);
 
         var counter = 0;
         $.each(slides, function( index, value ) {
@@ -100,12 +118,15 @@
                     if(foundImage){
                         banner.slides[index] = image;
                     }
-                    return ++counter;
+                    return ++counter
                 })
                 .then(function(counter){
-                    if(counter==9){
-                        var owl = $('#home-banner');
-                        owl.trigger('refresh.owl.carousel');
+                    if(counter==10) {
+                        $.each(banner.slides, function( index, value ) {
+                            var content = "<div class=\"item \"><img src=\"" + value + "\"></img></div>";
+                            owl.data('owlCarousel').addItem(content);
+                        });
+
                     }
                 });
         });

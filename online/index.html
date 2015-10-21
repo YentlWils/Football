@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="skdebrug">
+<html lang="nl" ng-app="skdebrug">
 
 <head>
 
@@ -7,6 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="cleartype" content="on">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#0089d0">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#0089d0">
 
     <!-- Chrome & Firefox OS -->
     <meta name="theme-color" content="#0089d0">
@@ -18,13 +36,13 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Welkom op de homepagina van uw favoriete voetbalclub SK De Brug. Dit is een portaal naar het laatste nieuws, info over evenementen, wedstrijden en veel meer.">
+    <meta name="author" content="Ben Oeyen">
+    <meta name="keywords" content="SK De Burg, SK, de brug, club, viaduct, brug, voetbal, soccer, kavvv, vriendenclubs, antwerpen, wirlijk, moerelei, game, match, wedstrijd, bal, footbal, history, goals, points, goaldifference, defender, striker, midfielder, keeper, doelman, verdediger, aanvaller, middenvelder">
 
-    <meta property="og:url" content="">
+    <meta property="og:url" content="http://www.skdebrug.be">
     <meta property="og:title" content="SK De Brug">
-    <meta property="og:description" content="">
+    <meta property="og:description" content="Welkom op de homepagina van uw favoriete voetbalclub SK De Brug. Dit is een portaal naar het laatste nieuws, info over evenementen, wedstrijden en veel meer.">
     <meta property="og:image" content="images/logo.png">
 
     <title>SK De Brug | Home</title>
@@ -116,11 +134,8 @@
     <div class="container page-border">
         <div class="row" ng-controller="bannerSliderController as banner">
             <div class="span12">
-                <data-owl-carousel id="home-banner" class="owl-carousel" data-options="{dotsSpeed : 400,dots: true, autoPlay: true, lazyLoad: true, items : 1, nav: true, autoplay : true, autoplayTimeout : 5000}">
-                    <div owl-carousel-item="" ng-repeat="slide in banner.slides" class="item">
-                        <img src="{{slide}}">
-                    </div>
-                </data-owl-carousel>
+                <div id="home-banner" class="owl-carousel" data-options="{loop: true, dotsSpeed : 400,dots: true, autoPlay: true, lazyLoad: true, items : 1, nav: true, autoplay : true, autoplayTimeout : 5000}">
+                </div>
             </div>
         </div>
         <!-- Marketing Icons Section -->
@@ -153,12 +168,12 @@
                         <h4 class="text-center">{{match.next.date | date:'EEEE dd/MM/yyyy - hh:mm'}}</h4>
                         <div class="panel-body-next-match">
                             <div class="in">
-                                <img src="images/clubs/{{match.next.homeTeam.img | lowercase }}.png" onerror="this.src = 'images/fallback/club.jpg';">
+                                <img ng-src="images/clubs/{{match.next.homeTeam.img | lowercase }}.png" onerror="this.src = 'images/fallback/club.jpg';">
                                 <h5>{{match.next.homeTeam.name}}</h5>
                             </div>
                             <div class="divider">VS</div>
                             <div class="out">
-                                <img src="images/clubs/{{match.next.awayTeam.img | lowercase }}.png" onerror="this.src = 'images/fallback/club.jpg';">
+                                <img ng-src="images/clubs/{{match.next.awayTeam.img | lowercase }}.png" onerror="this.src = 'images/fallback/club.jpg';">
                                 <h5>{{match.next.awayTeam.name}}</h5>
                             </div>
                         </div>
@@ -207,7 +222,7 @@
                     <div owl-carousel-item="" ng-repeat="player in team.players" class="item">
                         <a href="portfolio-item.html">
                             <div class="home-player">
-                                <img class="img-responsive" src="images/players/thumbs/{{player.lastName}}_{{player.firstName}}.jpg" alt="{{player.firstName}} {{player.lastName}}" onerror="this.src = 'images/fallback/player.jpg';">
+                                <img class="img-responsive" ng-src="images/players/thumbs/{{player.firstName | lowercase}}_{{player.lastName | lowercase}}.jpg" alt="{{player.firstName}} {{player.lastName}}" onerror="this.src = 'images/fallback/player.jpg';">
                                 <div class="number">{{player.number}}</div>
                                 <h5>{{player.firstName}} {{player.lastName}}</h5>
                             </div>
@@ -239,23 +254,10 @@
                     Tactiek wordt er consequent pas na de match besproken, amateurisme tiert er welig, de kantine is eerder mistroostig, de spits scoort naar verluidt meer naast dan op
                     het veld en de door supporters verkozen man van de match is meestal diegene die het minst fout heeft gedaan. Maar godverdoemme wat is het plezant, sjotten bij de Brug!
                 </p>
-                <a href="/club.html" class="btn btn-default">Lees meer</a>
+                <a href="club.html" class="btn btn-default">Lees meer</a>
             </div>
             <div class="col-md-6">
                 <img class="img-responsive" src="images/team/team-pic.jpg" alt="">
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Features Section -->
-        <div class="row">
-            <div class="col-lg-6">
-                <h2 class="page-header">Onze sponsors</h2>
-                <img class="img-responsive" src="http://initiahasselt.be/wp-content/uploads/2013/09/Hubo-logo-770.jpg" width="33%">
-            </div>
-            <div class="col-lg-6">
-                <h2 class="page-header">Sportfederatie</h2>
-                <img class="img-responsive" src="images/Logo_Erkende_Sportclub_A_def.jpg" width="33%">
             </div>
         </div>
         <!-- /.row -->
