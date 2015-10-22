@@ -42,6 +42,15 @@
         });
     });
 
+    app.controller('matchesController', function($scope, apiServices){
+        $scope.sortType     = 'date'; // set the default sort type
+        $scope.sortReverse  = false;  // set the default sort order
+
+        apiServices.getAllMatches().success(function (data) {
+            $scope.matches = data;
+        });
+    });
+
     app.controller('timelineController', function($scope, apiServices){
 
     });

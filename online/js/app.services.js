@@ -6,6 +6,7 @@
         news: 'data/news.json',
         newsItem: 'data/news-item.json?id={0}',
         nextMatch: 'data/next-match.json',
+        allMatches: 'data/all-matches.json',
         prevMatch: 'data/prev-match.json',
         league: 'data/league.json',
     };
@@ -26,6 +27,11 @@
             getNewsItem : function(x){
                 return $http({
                     url: api.newsItem.replace("{0}",x)
+                })
+            },
+            getAllMatches : function(){
+                return $http({
+                    url: api.allMatches
                 })
             },
             getNextMatch : function(){
