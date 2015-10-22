@@ -168,12 +168,12 @@
                         <h4 class="text-center">{{match.next.date | date:'EEEE dd/MM/yyyy - hh:mm'}}</h4>
                         <div class="panel-body-next-match">
                             <div class="in">
-                                <img ng-src="images/clubs/{{match.next.homeTeam.img | lowercase | nospace:'_'}}.png" onerror="this.src = 'images/fallback/club.jpg';">
+                                <img ng-src="images/clubs/{{match.next.homeTeam.name | lowercase | nospace:'_'}}.png" onerror="this.src = 'images/fallback/club.png';">
                                 <h5>{{match.next.homeTeam.name}}</h5>
                             </div>
                             <div class="divider">VS</div>
                             <div class="out">
-                                <img ng-src="images/clubs/{{match.next.awayTeam.img | lowercase | nospace:'_'}}.png" onerror="this.src = 'images/fallback/club.jpg';">
+                                <img ng-src="images/clubs/{{match.next.awayTeam.name | lowercase | nospace:'_'}}.png" onerror="this.src = 'images/fallback/club.png';">
                                 <h5>{{match.next.awayTeam.name}}</h5>
                             </div>
                         </div>

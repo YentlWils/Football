@@ -61,7 +61,7 @@ a{
         z-index: 999;
         //font-family: "Oswald";
 
-        &:hover{
+        &:hover, &:active, &:focus{
           //background: lighten($brug-blue, 10);
           background: transparent;
         }
@@ -252,7 +252,7 @@ header.carousel{
 .panel{
   .panel-heading{
     font-family: "Oswald";
-    background: darken($brug-blue, 10);
+    background: $brug-blue;
     color: white;
   }
 
@@ -276,7 +276,7 @@ header.carousel{
 
     .panel-body-date{
       float: right;
-      background-color: $brug-gray;
+      background-color: $brug-blue;
       color: white;
       padding: 8px;
       font-family: Oswald;
@@ -303,7 +303,7 @@ header.carousel{
         display: block;
         width: 100%;
         height: 0;
-        border-right: 37px solid $brug-gray;
+        border-right: 37px solid $brug-blue;
         border-bottom: 15px solid transparent;
         border-bottom-color: rgba(0,255,0,0);
         position: absolute;
@@ -357,6 +357,10 @@ table.table-skdebrug{
         color: rgba(255, 255, 255, 0.56);
       }
     }
+  }
+
+  img.logo{
+    width: 30px;
   }
 }
 

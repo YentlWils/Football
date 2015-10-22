@@ -59,8 +59,6 @@
         var match = this;
         apiServices.getNextMatch().success(function (data) {
             match.next = data[0];
-            match.next.homeTeam.img = match.next.homeTeam.name.replace(/ /g,'-');
-            match.next.awayTeam.img = match.next.awayTeam.name.replace(/ /g,'-');
         });
     });
 

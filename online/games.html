@@ -158,6 +158,8 @@
                                     <span ng-show="sortType == 'gameType' && !sortReverse" class="fa fa-caret-up"></span>
                                 </a>
                             </th>
+                            <th>
+                            </th>
                             <th title="thuisploeg">
                                 <a href="#" ng-click="sortType = 'homeTeam.name'; sortReverse = !sortReverse">
                                     Thuisploeg
@@ -171,6 +173,8 @@
                                     <span ng-show="sortType == 'homeScore' && sortReverse" class="fa fa-caret-down"></span>
                                     <span ng-show="sortType == 'awayScore' && !sortReverse" class="fa fa-caret-up"></span>
                                 </a>
+                            </th>
+                            <th>
                             </th>
                             <th title="bezoekers">
                                 <a href="#" ng-click="sortType = 'awayTeam.name'; sortReverse = !sortReverse">
@@ -191,9 +195,20 @@
                     <tbody>
                         <tr ng-repeat="match in matches | orderBy:sortType:sortReverse">
                             <td>{{match.gameType}}</td>
-                            <td>{{match.homeTeam.name}}</td>
+                            <td  width="30px">
+                                <img class="logo" ng-src="images/clubs/{{match.homeTeam.name | lowercase | nospace:'_'}}.png" onerror="this.src = 'images/fallback/club.png';">
+
+                            </td>
+                            <td>
+                                {{match.homeTeam.name}}
+                            </td>
                             <td>{{match.homeScore}} - {{match.awayScore}}</td>
-                            <td>{{match.awayTeam.name}}</td>
+                            <td  width="30px">
+                                <img class="logo" ng-src="images/clubs/{{match.awayTeam.name | lowercase | nospace:'_'}}.png" onerror="this.src = 'images/fallback/club.png';">
+                                </td>
+                            <td>
+                                {{match.awayTeam.name}}
+                            </td>
                             <td>{{match.date | date:'dd-MM-yyyy - hh:mm'}}</td>
                         </tr>
 

@@ -48,7 +48,7 @@ a {
     font-size: 18px;
     font-weight: 200;
     z-index: 999; }
-    .navbar .navbar-nav > li > a:hover {
+    .navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:active, .navbar .navbar-nav > li > a:focus {
       background: transparent; }
   .navbar .navbar-nav > li.current_page_item {
     background: white; }
@@ -178,7 +178,7 @@ header.carousel {
 
 .panel .panel-heading {
   font-family: "Oswald";
-  background: #00679d;
+  background: #0089d0;
   color: white; }
 .panel .panel-body {
   border-bottom: 1px solid #ddd; }
@@ -193,7 +193,7 @@ header.carousel {
     color: #333; }
   .panel .panel-body .panel-body-date {
     float: right;
-    background-color: #C5C5C5;
+    background-color: #0089d0;
     color: white;
     padding: 8px;
     font-family: Oswald;
@@ -213,7 +213,7 @@ header.carousel {
       display: block;
       width: 100%;
       height: 0;
-      border-right: 37px solid #C5C5C5;
+      border-right: 37px solid #0089d0;
       border-bottom: 15px solid transparent;
       border-bottom-color: rgba(0, 255, 0, 0);
       position: absolute;
@@ -246,6 +246,8 @@ table.table-skdebrug th {
     text-decoration: underline; }
     table.table-skdebrug th a:hover {
       color: rgba(255, 255, 255, 0.56); }
+table.table-skdebrug img.logo {
+  width: 30px; }
 
 footer {
   margin: 0px; }
