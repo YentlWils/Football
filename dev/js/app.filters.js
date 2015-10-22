@@ -21,6 +21,10 @@
         };
     });
 
-
+    app.filter('nospace', function () {
+        return function (value, symbol) {
+            return (!value) ? '' : value.replace(/ /g, symbol);
+        };
+    });
 
 })();

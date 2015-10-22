@@ -106,7 +106,7 @@
                             <a href="index.html">Home</a>
                         </li>
                         <li>
-                            <a href="news.html">Nieuws</a>
+                            <a href="news.html#/news">Nieuws</a>
                         </li>
                         <li>
                             <a href="ranking.html">Klassement</a>
@@ -180,7 +180,7 @@
             <div class="col-xs-6 col-sm-4 col-md-3 text-center" ng-repeat="player in team.players">
                 <div class="thumbnail player">
                     <div class="player-image">
-                        <div class="player-image--img img-responsive" style="background-image: url(images/players/{{player.firstName | lowercase}}_{{player.lastName | lowercase}}.jpg), url('images/fallback/player.jpg');"></div>
+                        <div class="player-image--img img-responsive" style="background-image: url(images/players/{{player.firstName | lowercase | nospace:'_'}}_{{player.lastName | lowercase | nospace:'_'}}.jpg), url('images/fallback/player.jpg');"></div>
                     </div>
                     <div class="caption">
                         <h3>{{player.firstName}} {{player.lastName}}<br>
@@ -216,6 +216,7 @@
 
     <!-- Angular -->
     <script src="js/libs/angular/angular.min.js"></script>
+    <script src="js/libs/angular/angular.route.js"></script>
 
     <!-- jQuery -->
     <script src="js/libs/jQuery/jquery.js"></script>
@@ -223,12 +224,15 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/libs/bootstrap/bootstrap.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
+    <!-- OWL carousel -->
+    <script src="js/libs/owl-carousel/owl.carousel.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
     <script src="js/app.directives.js"></script>
     <script src="js/app.services.js"></script>
     <script src="js/app.controllers.js"></script>
     <script src="js/app.filters.js"></script>
+    <script src="js/app.config.js"></script>
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
 

@@ -36,16 +36,16 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
-    <meta name="description" content="Op zoek naar een adres, telefoonnummer of emailadres? Hier kan je terecht voor alle informatie om ons te kunnen contacteren.">
+    <meta name="description" content="Welkom op de homepagina van uw favoriete voetbalclub SK De Brug. Dit is een portaal naar het laatste nieuws, info over evenementen, wedstrijden en veel meer.">
     <meta name="author" content="Ben Oeyen">
     <meta name="keywords" content="SK De Burg, SK, de brug, club, viaduct, brug, voetbal, soccer, kavvv, vriendenclubs, antwerpen, wirlijk, moerelei, game, match, wedstrijd, bal, footbal, history, goals, points, goaldifference, defender, striker, midfielder, keeper, doelman, verdediger, aanvaller, middenvelder">
 
-    <meta property="og:url" content="http://www.skdebrug.be/contact.html">
-    <meta property="og:title" content="Contact">
-    <meta property="og:description" content="Op zoek naar een adres, telefoonnummer of emailadres? Hier kan je terecht voor alle informatie om ons te kunnen contacteren.">
+    <meta property="og:url" content="http://www.skdebrug.be">
+    <meta property="og:title" content="SK De Brug">
+    <meta property="og:description" content="Welkom op de homepagina van uw favoriete voetbalclub SK De Brug. Dit is een portaal naar het laatste nieuws, info over evenementen, wedstrijden en veel meer.">
     <meta property="og:image" content="images/logo.png">
 
-    <title>Contact</title>
+    <title>SK De Brug | Home</title>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <!-- This will prefetch content from google web fonts website -->
@@ -105,7 +105,7 @@
                         <li>
                             <a href="index.html">Home</a>
                         </li>
-                        <li>
+                        <li class="current_page_item">
                             <a href="news.html#/news">Nieuws</a>
                         </li>
                         <li>
@@ -115,12 +115,12 @@
                             <a href="games.html">Matchen</a>
                         </li>
                         <li>
-                            <a href="team.html">Spelers</a>
+                            <a href="team.html">Team</a>
                         </li>
                         <li>
                             <a href="club.html">Club</a>
                         </li>
-                        <li class="current_page_item">
+                        <li>
                             <a href="contact.html">Contact</a>
                         </li>
                     </ul>
@@ -130,58 +130,10 @@
             <!-- /.container -->
         </nav>
     </header>
-
     <!-- Page Content -->
     <div class="container page-border">
 
-        <!-- Page Heading/Breadcrumbs -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header">Contact</h2>
-                <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a>
-                    </li>
-                    <li class="active">Contact</li>
-                </ol>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Intro Content -->
-        <div class="row">
-            <div class="col-md-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2502.2660943432397!2d4.411161315942357!3d51.15888354394587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f0e0abec3bb9%3A0x129b566df55c8d40!2sWilrijkstraat+163%2C+2610+Antwerpen!5e0!3m2!1snl!2sbe!4v1445420918799" width="100%" height="406" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-6">
-                <h3>Contact Details</h3>
-                <p>
-                    SK De Brug<br>Wilrijkstraat 163<br>2650 Edegem<br>
-                </p>
-                <p><i class="fa fa-phone"></i>
-                    <abbr title="Phone">TEL.</abbr>: +32(0)475 96 36 01</p>
-                <p><i class="fa fa-envelope-o"></i>
-                    <abbr title="Email">EMAIL</abbr>: <a href="mailto:skdebrug@telenet.be">skdebrug@telenet.be</a>
-                </p>
-                <p><i class="fa fa-university"></i>
-                    <abbr title="IBAN">IBAN</abbr>: BE94 2200 5301 8014</p>
-                <ul class="list-unstyled list-inline list-social-icons">
-                    <li>
-                        <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
-                    </li>
-                </ul>
-                <img class="img-responsive" src="images/Logo_Erkende_Sportclub_A_def.jpg" alt="">
-            </div>
-        </div>
-        <!-- /.row -->
+        <div ng-view></div>
 
         <hr>
 
@@ -224,7 +176,7 @@
     <script src="js/app.config.js"></script>
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
-
+</div>
 </body>
 
 </html>

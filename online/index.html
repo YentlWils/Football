@@ -106,7 +106,7 @@
                             <a href="index.html">Home</a>
                         </li>
                         <li>
-                            <a href="news.html">Nieuws</a>
+                            <a href="news.html#/news">Nieuws</a>
                         </li>
                         <li>
                             <a href="ranking.html">Klassement</a>
@@ -141,11 +141,11 @@
         <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-md-8">
-                <div class="panel panel-default" ng-controller="newsController as news">
+                <div class="panel panel-default" ng-controller="newsController">
                     <div class="panel-heading">
                         <h4>Laatste nieuwsberichten</h4>
                     </div>
-                    <div class="panel-body" ng-repeat="item in news.items">
+                    <div class="panel-body" ng-repeat="item in items | limitTo:3">
                             <span class="panel-body-date">
                                 <span class="day">{{item.date | date:'dd'}}</span>
                                 <span class="month">{{item.date | date:'MMM' | uppercase}}</span>
@@ -155,7 +155,7 @@
                         <a href="#" class="btn btn-default">Lees meer</a>
                     </div>
                     <div class="panel-body">
-                        <a href="#">Meer nieuwsberichten</a>
+                        <a href="news.html#/news">Meer nieuwsberichten</a>
                     </div>
                 </div>
             </div>
@@ -220,13 +220,11 @@
             <div class="col-lg-12">
                 <data-owl-carousel class="owl-carousel" data-options="{dotsSpeed : 400, autoPlay: 3000, items : 6, margin: 10}">
                     <div owl-carousel-item="" ng-repeat="player in team.players" class="item">
-                        <a href="portfolio-item.html">
                             <div class="home-player">
-                                <img class="img-responsive" ng-src="images/players/thumbs/{{player.firstName | lowercase}}_{{player.lastName | lowercase}}.jpg" alt="{{player.firstName}} {{player.lastName}}" onerror="this.src = 'images/fallback/player.jpg';">
+                                <img class="img-responsive" ng-src="images/players/thumbs/{{player.firstName | lowercase | nospace:'_'}}_{{player.lastName | lowercase | nospace:'_'}}.jpg" alt="{{player.firstName}} {{player.lastName}}" onerror="this.src = 'images/fallback/player.jpg';">
                                 <div class="number">{{player.number}}</div>
                                 <h5>{{player.firstName}} {{player.lastName}}</h5>
                             </div>
-                        </a>
                     </div>
                 </data-owl-carousel>
 
@@ -284,6 +282,7 @@
 
     <!-- Angular -->
     <script src="js/libs/angular/angular.min.js"></script>
+    <script src="js/libs/angular/angular.route.js"></script>
 
     <!-- jQuery -->
     <script src="js/libs/jQuery/jquery.js"></script>
@@ -299,6 +298,7 @@
     <script src="js/app.services.js"></script>
     <script src="js/app.controllers.js"></script>
     <script src="js/app.filters.js"></script>
+    <script src="js/app.config.js"></script>
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
 </div>

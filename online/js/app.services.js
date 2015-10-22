@@ -4,6 +4,7 @@
     var api = {
         players: 'data/player.json',
         news: 'data/news.json',
+        newsItem: 'data/news-item.json?id={0}',
         nextMatch: 'data/next-match.json',
         prevMatch: 'data/prev-match.json',
         league: 'data/league.json',
@@ -20,6 +21,11 @@
             getNews : function(){
                 return $http({
                     url: api.news
+                })
+            },
+            getNewsItem : function(x){
+                return $http({
+                    url: api.newsItem.replace("{0}",x)
                 })
             },
             getNextMatch : function(){

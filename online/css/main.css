@@ -20,6 +20,7 @@ body {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
+  min-height: 100%;
   background-attachment: fixed; }
 
 a {
@@ -139,6 +140,16 @@ a {
 header.carousel {
   height: 75%; }
 
+.news-date {
+  display: inline-block;
+  background-color: #0089d0;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-family: Oswald;
+  font-size: 21px;
+  color: white;
+  position: relative; }
+
 .owl-carousel {
   position: relative;
   margin-bottom: 40px; }
@@ -188,7 +199,8 @@ header.carousel {
     font-family: Oswald;
     font-weight: 700;
     margin-left: 12px;
-    position: relative; }
+    position: relative;
+    margin-bottom: 15px; }
     .panel .panel-body .panel-body-date span {
       display: block;
       text-align: center; }
