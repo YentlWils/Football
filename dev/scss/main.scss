@@ -343,6 +343,23 @@ header.carousel{
   }
 }
 
+table.table-skdebrug{
+  th{
+    font-family: "Oswald";
+    background: #0089d0;
+    font-size: 1.3em;
+    font-weight: 600;
+
+    a{
+      color: white;
+      text-decoration: underline;
+      &:hover{
+        color: rgba(255, 255, 255, 0.56);
+      }
+    }
+  }
+}
+
 footer{
   margin: 0px;
 }

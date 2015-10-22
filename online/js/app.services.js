@@ -30,17 +30,17 @@
             },
             getNextMatch : function(){
                 return $http({
-                    url: api.nextMatch
+                    url: api.nextMatch.replace("{0}",1)
                 })
             },
             getNextXMatch : function(x){
                 return $http({
-                    url: api.nextMatch
+                    url: api.nextMatch.replace("{0}",x)
                 })
             },
             getPrevMatch : function(){
                 return $http({
-                    url: api.prevMatch
+                    url: api.prevMatch.replace("{0}",1)
                 })
             },
             getLeague : function(){

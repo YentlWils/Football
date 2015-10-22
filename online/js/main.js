@@ -72,25 +72,4 @@ $(function() {
     });
 
 
-
-
-
-
-    $("#example-two a").hover(function() {
-        $el = $(this);
-        leftPos = $el.position().left;
-        newWidth = $el.parent().width();
-        $magicLineTwo.stop().animate({
-            left: leftPos,
-            width: newWidth,
-            backgroundColor: $el.attr("rel")
-        })
-    }, function() {
-        $magicLineTwo.stop().animate({
-            left: $magicLineTwo.data("origLeft"),
-            width: $magicLineTwo.data("origWidth"),
-            backgroundColor: $magicLineTwo.data("origColor")
-        });
-    });
-
 });

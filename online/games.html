@@ -36,16 +36,16 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
-    <meta name="description" content="Wil je weten welke spelers het collectief SK De Brug omvatten. Hier vind je alle vrijgegeven informatie over deze halfgoden.">
+    <meta name="description" content="Intresse in de tussenstand in de competitie of gewoon op zoek naar wat het doelpuntensaldo van SK De Brug is, hier vind je alle cijfers terug.">
     <meta name="author" content="Ben Oeyen">
     <meta name="keywords" content="SK De Burg, SK, de brug, club, viaduct, brug, voetbal, soccer, kavvv, vriendenclubs, antwerpen, wirlijk, moerelei, game, match, wedstrijd, bal, footbal, history, goals, points, goaldifference, defender, striker, midfielder, keeper, doelman, verdediger, aanvaller, middenvelder">
 
-    <meta property="og:url" content="http://www.skdebrug.be/team.html">
-    <meta property="og:title" content="Het Team">
-    <meta property="og:description" content="Wil je weten welke spelers het collectief SK De Brug omvatten. Hier vind je alle vrijgegeven informatie over deze halfgoden.">
+    <meta property="og:url" content="http://www.skdebrug.be/ranking.html">
+    <meta property="og:title" content="Klassement">
+    <meta property="og:description" content="Intresse in de tussenstand in de competitie of gewoon op zoek naar wat het doelpuntensaldo van SK De Brug is, hier vind je alle cijfers terug.">
     <meta property="og:image" content="images/logo.png">
 
-    <title>Het Team</title>
+    <title>Klassement</title>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <!-- This will prefetch content from google web fonts website -->
@@ -111,11 +111,11 @@
                         <li>
                             <a href="ranking.html">Klassement</a>
                         </li>
-                        <li>
+                        <li class="current_page_item">
                             <a href="games.html">Wedstrijden</a>
                         </li>
-                        <li class="current_page_item">
-                            <a href="team.html">Spelers</a>
+                        <li>
+                            <a href="team.html">Team</a>
                         </li>
                         <li>
                             <a href="club.html">Club</a>
@@ -130,68 +130,117 @@
             <!-- /.container -->
         </nav>
     </header>
-
     <!-- Page Content -->
     <div class="container page-border">
 
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Team</h2>
+                <h2 class="page-header">Klassement</h2>
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a>
                     </li>
-                    <li class="active">Team</li>
+                    <li class="active">Klassement</li>
                 </ol>
             </div>
         </div>
         <!-- /.row -->
 
-        <!-- Intro Content -->
         <div class="row">
-            <div class="col-md-6">
-                <img class="img-responsive" src="images/team/team-players.jpg" alt="">
-            </div>
-            <div class="col-md-6">
-                <h2>Onze spelers</h2>
-                <p>
-                    Hier ziet u ze afzonderlijk afgebeeld, de protagonisten van het zichzelf relativerende sterrenensemble genaamd SK de Brug, de halfgoden van het speelveld in het
-                    diepst van hun gedachten.
-                </p>
-                <p>
-                    Allen hebben ze twee eigenschappen gemeen. Vooreerst mankeren ze meestal één en soms meerdere eigenschappen om een echt goede voetballer te zijn.
-                    De ene is technisch sterk, maar bijzonder traag, terwijl de andere dan weer razendsnel is, maar technisch minder begaafd en als er een enkeling dan weer beide capaciteiten
-                    lijkt te hebben ontbreekt hem de wil om het provinciale niveau te overstijgen.
-                    De tweede eigenschap is dat geen enkele van deze heren SK de Brug zou willen ruilen voor een plaatsje bij pakweg Barcelona, AA Gent, Real Madrid of zelfs de Rode Duivels.
-                </p>
-                <p>
-                    De reden is evenwel simpel: wij hebben geen vol koning Boudewijnstadion en gastoptreden van Dimitri Vegas en Like Mike nodig voor een spetterende 3de helft.
-                    Een kantine met ploegfoto’s uit lang vervlogen tijden, luttele liters gerstenat en in het beste geval een schaal partysnacks zijn immers al meer dan genoeg.
-                </p>
+            <div class="col-lg-12" ng-controller="rankingController">
+                <table class="table table-striped table-hover table-bordered table-skdebrug">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a href="#" ng-click="sortType = ''; sortReverse = !sortReverse">
+                                    #
+                                    <span ng-show="sortType == '' && sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == '' && !sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </th>
+                            <th title="ploeg">
+                                <a href="#" ng-click="sortType = 'team.name'; sortReverse = !sortReverse">
+                                    Ploeg
+                                    <span ng-show="sortType == 'team.name' && sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'team.name' && !sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </th>
+                            <th title="aantal wedstrijden">
+                                <a href="#" ng-click="sortType = 'games'; sortReverse = !sortReverse">
+                                    M
+                                    <span ng-show="sortType == 'games' && sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'games' && !sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </th>
+                            <th title="gewonnen">
+                                <a href="#" ng-click="sortType = 'wins'; sortReverse = !sortReverse">
+                                    M+
+                                    <span ng-show="sortType == 'wins' && sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'wins' && !sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </th>
+                            <th title="verloren">
+                                <a href="#" ng-click="sortType = 'losses'; sortReverse = !sortReverse">
+                                    M-
+                                    <span ng-show="sortType == 'losses' && sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'losses' && !sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </th>
+                            <th title="gelijkspel">
+                                <a href="#" ng-click="sortType = 'ties'; sortReverse = !sortReverse">
+                                    M=
+                                    <span ng-show="sortType == 'ties' && sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'ties' && !sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </th>
+                            <th title="doelpunten gescoord">
+                                <a href="#" ng-click="sortType = 'goalsFor'; sortReverse = !sortReverse">
+                                    D+
+                                    <span ng-show="sortType == 'goalsFor' && sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'goalsFor' && !sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </th>
+                            <th title="doelpunten tegen">
+                                <a href="#" ng-click="sortType = 'goalsAgainst'; sortReverse = !sortReverse">
+                                    D-
+                                    <span ng-show="sortType == 'goalsAgainst' && sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'goalsAgainst' && !sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </th>
+                            <th title="doelsaldo">
+                                <a href="#" ng-click="sortType = 'goalDifference'; sortReverse = !sortReverse">
+                                    D+/-
+                                    <span ng-show="sortType == 'goalDifference' && sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'goalDifference' && !sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </th>
+                            <th title="punten">
+                                <a href="#" ng-click="sortType = 'points'; sortReverse = !sortReverse">
+                                    PTN
+                                    <span ng-show="sortType == 'points' && sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'points' && !sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="team in ranking.standings | orderBy:sortType:sortReverse">
+                            <td scope="row">{{ranking.standings.indexOf(team) + 1}}</td>
+                            <td>{{team.team.name}}</td>
+                            <td>{{team.games}}</td>
+                            <td>{{team.wins}}</td>
+                            <td>{{team.losses}}</td>
+                            <td>{{team.ties}}</td>
+                            <td>{{team.goalsFor}}</td>
+                            <td>{{team.goalsAgainst}}</td>
+                            <td>{{team.goalDifference}}</td>
+                            <td>{{team.points}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
             </div>
         </div>
-        <!-- /.row -->
-
-        <!-- Team Members -->
-        <div class="row" ng-controller="teamController as team">
-            <div class="col-lg-12">
-                <h2 class="page-header">Onze Spelers</h2>
-            </div>
-            <div class="col-xs-6 col-sm-4 col-md-3 text-center" ng-repeat="player in team.players">
-                <div class="thumbnail player">
-                    <div class="player-image">
-                        <div class="player-image--img img-responsive" style="background-image: url(images/players/{{player.firstName | lowercase | nospace:'_'}}_{{player.lastName | lowercase | nospace:'_'}}.jpg), url('images/fallback/player.jpg');"></div>
-                    </div>
-                    <div class="caption">
-                        <h3>{{player.firstName}} {{player.lastName}}<br>
-                            <small>#{{player.number}} - {{player.playerType}}</small>
-                        </h3>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /.row -->
 
 
         <hr>
@@ -235,7 +284,6 @@
     <script src="js/app.config.js"></script>
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
-
 </body>
 
 </html>

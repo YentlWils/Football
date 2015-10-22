@@ -112,7 +112,7 @@
                             <a href="ranking.html">Klassement</a>
                         </li>
                         <li>
-                            <a href="games.html">Matchen</a>
+                            <a href="games.html">Wedstrijden</a>
                         </li>
                         <li>
                             <a href="team.html">Team</a>
@@ -152,7 +152,7 @@
                             </span>
                         <h4>{{item.title}}</h4>
                         <p>{{item.content | trim:true:300:' ...'}}</p>
-                        <a href="#" class="btn btn-default">Lees meer</a>
+                        <a href="news.html#/news/{{item.id}}" class="btn btn-default">Lees meer</a>
                     </div>
                     <div class="panel-body">
                         <a href="news.html#/news">Meer nieuwsberichten</a>
@@ -168,12 +168,12 @@
                         <h4 class="text-center">{{match.next.date | date:'EEEE dd/MM/yyyy - hh:mm'}}</h4>
                         <div class="panel-body-next-match">
                             <div class="in">
-                                <img ng-src="images/clubs/{{match.next.homeTeam.img | lowercase }}.png" onerror="this.src = 'images/fallback/club.jpg';">
+                                <img ng-src="images/clubs/{{match.next.homeTeam.img | lowercase | nospace:'_'}}.png" onerror="this.src = 'images/fallback/club.jpg';">
                                 <h5>{{match.next.homeTeam.name}}</h5>
                             </div>
                             <div class="divider">VS</div>
                             <div class="out">
-                                <img ng-src="images/clubs/{{match.next.awayTeam.img | lowercase }}.png" onerror="this.src = 'images/fallback/club.jpg';">
+                                <img ng-src="images/clubs/{{match.next.awayTeam.img | lowercase | nospace:'_'}}.png" onerror="this.src = 'images/fallback/club.jpg';">
                                 <h5>{{match.next.awayTeam.name}}</h5>
                             </div>
                         </div>
