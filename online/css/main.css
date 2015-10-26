@@ -236,6 +236,10 @@ header.carousel {
       .panel .panel-body .panel-body-next-match > div.divider {
         font-size: 18px; }
 
+table.table-skdebrug tr.highlight td {
+  font-weight: bold;
+  color: #000304;
+  background-color: #d0efff; }
 table.table-skdebrug th {
   font-family: "Oswald";
   background: #0089d0;

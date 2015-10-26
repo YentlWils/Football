@@ -344,6 +344,14 @@ header.carousel{
 }
 
 table.table-skdebrug{
+  tr.highlight{
+    td{
+      font-weight: bold;
+      color: darken($brug-blue, 40);
+      background-color: lighten($brug-blue, 50);
+    }
+  }
+
   th{
     font-family: "Oswald";
     background: #0089d0;

@@ -12,9 +12,9 @@
         players: '/data/player',
         news: '/data/news',
         newsItem: '/data/news/{0}',
-        nextMatch: '/data/game/next/{0}',
+        nextMatch: '/data/game/next/{0}/team/{1}',
         allMatches: '/data/game',
-        prevMatch: '/data/game/prev/{0}',
+        prevMatch: '/data/game/prev/{0}/team/{1}',
         league: '/data/league',
     };
 
@@ -41,19 +41,19 @@
                     url: api.allMatches
                 })
             },
-            getNextMatch : function(){
+            getNextMatch : function(y){
                 return $http({
-                    url: api.nextMatch.replace("{0}",1)
+                    url: api.nextMatch.replace("{0}",1).replace("{1}",y)
                 })
             },
-            getNextXMatch : function(x){
+            getNextXMatch : function(x, y){
                 return $http({
-                    url: api.nextMatch.replace("{0}",x)
+                    url: api.nextMatch.replace("{0}",x).replace("{1}",y)
                 })
             },
-            getPrevMatch : function(){
+            getPrevMatch : function(y){
                 return $http({
-                    url: api.prevMatch.replace("{0}",1)
+                    url: api.prevMatch.replace("{0}",1).replace("{1}",y)
                 })
             },
             getLeague : function(){
