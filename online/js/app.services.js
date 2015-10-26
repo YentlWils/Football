@@ -41,19 +41,14 @@
                     url: api.allMatches
                 })
             },
-            getNextMatch : function(y){
-                return $http({
-                    url: api.nextMatch.replace("{0}",1).replace("{1}",y)
-                })
-            },
             getNextXMatch : function(x, y){
                 return $http({
                     url: api.nextMatch.replace("{0}",x).replace("{1}",y)
                 })
             },
-            getPrevMatch : function(y){
+            getPrevXMatch : function(x, y){
                 return $http({
-                    url: api.prevMatch.replace("{0}",1).replace("{1}",y)
+                    url: api.prevMatch.replace("{0}",x).replace("{1}",y)
                 })
             },
             getLeague : function(){
